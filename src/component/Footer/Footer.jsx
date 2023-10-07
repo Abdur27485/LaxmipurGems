@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='text-white'>
-                <img className=' w-[300px] h-[100px] mb-7' src="public\logo.png" alt="site-logo" />
+                <img className=' w-[300px] h-[100px] mb-7' src=".\logo.png" alt="site-logo" />
                 <div>
                     <p>Tower Of Akash, 54 Gulshan Avenue, Road No.132, Gulshan-1</p>
                     <p>Dhaka-1212, Hotline +880 01728913008</p>

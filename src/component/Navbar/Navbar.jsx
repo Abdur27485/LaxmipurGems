@@ -4,7 +4,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className='bg-[#590d82]'>
-            <img className='mx-auto px-10 py-5' src="public\logo2.png" alt="" />
+            <img className='mx-auto px-10 py-5' src=".\logo2.png" alt="" />
             {/* For large screen */}
             <div className='bg-white py-5 px-5 sm:flex hidden items-center justify-between'>
                 <ul className='flex gap-5'>
