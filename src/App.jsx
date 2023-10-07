@@ -1,11 +1,11 @@
 import './App.css'
-import Footer from './component/Footer/Footer'
+import Main from './layout/Main/Main'
 
 function App() {
 
   return (
     <>
-      <Footer></Footer>
+      <Main></Main>
     </>
   )
 }
