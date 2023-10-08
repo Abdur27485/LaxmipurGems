@@ -32,7 +32,7 @@ const Navbar = () => {
                             <a href="" className='font-semibold'>Login</a>
                         </Link>
                         <p className='inline font-semibold py-2'>|</p>
-                        <a href="" className='font-semibold ml-2 rounded hover:bg-[#9816df] hover:text-white px-2 py-2'>Sign Up</a>
+                        <Link to={'./signUp'} className='font-semibold ml-2 rounded hover:bg-[#9816df] hover:text-white px-2 py-2'>Sign Up</Link>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const Navbar = () => {
                             <a href="" className='font-semibold'>Login</a>
                         </Link>
                         <p className='inline font-semibold py-2'>|</p>
-                        <a href="" className='font-semibold ml-2 rounded hover:bg-[#9816df] hover:text-white px-2 py-2'>Sign Up</a>
+                        <Link to={'./signUp'} href="" className='font-semibold ml-2 rounded hover:bg-[#9816df] hover:text-white px-2 py-2'>Sign Up</Link>
                     </div>
                 </div>
 
