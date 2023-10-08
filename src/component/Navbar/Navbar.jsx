@@ -12,13 +12,13 @@ const Navbar = () => {
                         <a>Home</a>
                     </li>
                     <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
-                        <a>All jewellery</a>
+                        <a>All Jewellery</a>
                     </li>
                     <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                         <a>My Jewellery</a>
                     </li>
                     <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
-                        <a>Add jewellery</a>
+                        <a>Add Jewellery</a>
                     </li>
                     <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                         <a>Blogs</a>
@@ -76,7 +76,7 @@ const Navbar = () => {
                                     className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-[#ffdee9] hover:text-gray-700 font-semibold"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    All jewellery
+                                    All Jewellery
                                 </a>
 
                                 <a
@@ -92,7 +92,7 @@ const Navbar = () => {
                                     className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-[#ffdee9] hover:text-gray-700 font-semibold"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    Add jewellery
+                                    Add Jewellery
                                 </a>
                                 <a
                                     href="#"
