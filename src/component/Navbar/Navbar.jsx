@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +27,10 @@ const Navbar = () => {
                 </ul>
                 <div className='flex'>
                     <div className='flex'>
-                        <div className='text-white rounded space-x-2 mr-2 px-2 py-2 bg-[#7912b0] hover:bg-[#9816df]'>
+                        <Link to={"./login"} className='text-white rounded space-x-2 mr-2 px-2 py-2 bg-[#7912b0] hover:bg-[#9816df]'>
                             <i className="fa-solid fa-user"></i>
                             <a href="" className='font-semibold'>Login</a>
-                        </div>
+                        </Link>
                         <p className='inline font-semibold py-2'>|</p>
                         <a href="" className='font-semibold ml-2 rounded hover:bg-[#9816df] hover:text-white px-2 py-2'>Sign Up</a>
                     </div>
@@ -46,10 +47,10 @@ const Navbar = () => {
                 }
                 <div className='flex'>
                     <div className='flex'>
-                        <div className='text-white rounded space-x-2 mr-2 px-2 py-2 bg-[#7912b0] hover:bg-[#9816df]'>
+                        <Link to={'./login'} className='text-white rounded space-x-2 mr-2 px-2 py-2 bg-[#7912b0] hover:bg-[#9816df]'>
                             <i className="fa-solid fa-user"></i>
                             <a href="" className='font-semibold'>Login</a>
-                        </div>
+                        </Link>
                         <p className='inline font-semibold py-2'>|</p>
                         <a href="" className='font-semibold ml-2 rounded hover:bg-[#9816df] hover:text-white px-2 py-2'>Sign Up</a>
                     </div>
