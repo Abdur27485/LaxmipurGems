@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [showPassword, SetShowPassword] = useState(true)
@@ -31,7 +32,7 @@ const Login = () => {
                     <button type="submit" className='w-full mb-3 bg-[#7912b0] hover:bg-[#9816df] py-2 px-5 rounded font-semibold text-white'>Login to continue</button>
                     <div className='flex justify-between text-[#ff85ac]'>
                         <a className='cursor-pointer hover:underline' href="#">Forgot Password</a>
-                        <a className='cursor-pointer hover:underline' href="#">Create Account</a>
+                        <Link to={"/signUp"} className='cursor-pointer hover:underline' href="#">Create Account</Link>
                     </div>
                 </form>
             </div>
