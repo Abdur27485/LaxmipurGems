@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div className='bg-[#590d82]'>
             <img className='mx-auto px-10 py-5' src=".\logo2.png" alt="" />
