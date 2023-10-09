@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../Firebase/AuthProvider';
 
 const Login = () => {
     const [showPassword, SetShowPassword] = useState(false)
     const { register, handleSubmit } = useForm();
+
+    const {logInUser} = useContext(AuthContext)
 
     const navigate = useNavigate();
 

@@ -17,7 +17,7 @@ const WeddingSpecial = () => {
                     <p>Priceless Necklace</p>
                 </div>
                 <div className='space-y-2 text-center text-2xl'>
-                    <img src=".\necklace.webp" className="cursor-pointer" />
+                    <img src=".\platinum.webp" className="cursor-pointer" />
                     <p>Platinum Collection</p>
                 </div>
             </div>
