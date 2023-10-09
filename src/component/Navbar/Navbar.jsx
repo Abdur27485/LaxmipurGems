@@ -23,25 +23,25 @@ const Navbar = () => {
                     <Link to={'/'} className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                         <a>Home</a>
                     </Link>
-                    <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
+                    <Link to={'/allJewellery'} className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                         <a>All Jewellery</a>
-                    </li>
+                    </Link>
                     {
                         user ?
                             <>
-                                <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
+                                <Link to={'/myJewellery'} className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                                     <a>My Jewellery</a>
-                                </li>
-                                <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
+                                </Link>
+                                <Link to={'/addJewellery'} className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                                     <a>Add Jewellery</a>
-                                </li>
+                                </Link>
                             </>
                             :
                             ''
 }
-                    <li className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
+                    <Link to={'/blogs'} className='font-semibold hover:text-[#FEACC6] cursor-pointer'>
                         <a>Blogs</a>
-                    </li>
+                    </Link>
                 </ul>
                 <div className='flex'>
                     {
@@ -106,42 +106,42 @@ const Navbar = () => {
                                     Home
                                 </Link>
 
-                                <a
-                                    href="#"
+                                <Link
+                                    to={'/allJewellery'}
                                     className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-[#ffdee9] hover:text-gray-700 font-semibold"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     All Jewellery
-                                </a>
+                                </Link>
                                 {
                                     user ?
                                         <>
-                                            <a
-                                                href="#"
+                                            <Link
+                                                to={'/myJewellery'}
                                                 className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-[#ffdee9] hover:text-gray-700 font-semibold"
                                                 onClick={() => setIsOpen(false)}
                                             >
                                                 My Jewellery
-                                            </a>
+                                            </Link>
 
-                                            <a
-                                                href="#"
+                                            <Link
+                                                to={'/addJewellery'}
                                                 className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-[#ffdee9] hover:text-gray-700 font-semibold"
                                                 onClick={() => setIsOpen(false)}
                                             >
                                                 Add Jewellery
-                                            </a>
+                                            </Link>
                                         </>
                                         :
                                         ''
                                 }
-                                <a
-                                    href="#"
+                                <Link
+                                    to={'/blogs'}
                                     className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-[#ffdee9] hover:text-gray-700 font-semibold"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     Blogs
-                                </a>
+                                </Link>
 
                             </div>
                         </div>
