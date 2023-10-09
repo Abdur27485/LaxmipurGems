@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Firebase/AuthProvider';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
     const navigate = useNavigate();
-    const {updateUserProfile, createUser} = useContext(AuthContext)
+    const { updateUserProfile, createUser } = useContext(AuthContext)
     const [showPassword, SetShowPassword] = useState(false)
     const { register, handleSubmit } = useForm();
 
@@ -23,16 +24,21 @@ const SignUp = () => {
             method: 'POST',
             body: formImg
         })
-        .then(res => res.json())
-        .then( imgUrl =>{
-            createUser(data.email, data.password)
-            .then(result => {
-                updateUserProfile(imgUrl.data.display_url)
-                .then(() =>{
-                    navigate('/')
-                })
+            .then(res => res.json())
+            .then(imgUrl => {
+                createUser(data.email, data.password)
+                    .then(result => {
+                        updateUserProfile(imgUrl.data.display_url)
+                            .then(() => {
+                                Swal.fire(
+                                    'Welcome',
+                                    'Account created successfully',
+                                    'success'
+                                )
+                                navigate('/')
+                            })
+                    })
             })
-        })
 
     }
     return (
