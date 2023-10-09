@@ -5,7 +5,7 @@ import { Outlet, ScrollRestoration } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <div>
+        <div data-theme="light">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
