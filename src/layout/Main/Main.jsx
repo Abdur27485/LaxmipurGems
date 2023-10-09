@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../../component/Footer/Footer';
 import Navbar from '../../component/Navbar/Navbar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 
 const Main = () => {
     return (
@@ -9,6 +9,7 @@ const Main = () => {
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
+            <ScrollRestoration></ScrollRestoration>
         </div>
     );
 };

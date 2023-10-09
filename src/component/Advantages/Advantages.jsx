@@ -7,24 +7,24 @@ const Advantages = () => {
             <div className='bg-gray-100'>
                 <div className='py-4 justify-center gap-x-24 gap-y-10 items-center px-10 flex flex-col sm:flex-row'>
                     <div>
-                        <img className='w-full' src=".\refund-icon.png" alt="" />
+                        <img className='mx-auto' src=".\refund-icon.png" alt="" />
                         <p className='text-center mt-2'>7 Days Return</p>
                     </div>
                     <div>
-                        <img src=".\warranty.png" alt="" />
-                        <p>7 Days Return</p>
+                        <img className='mx-auto' src=".\warranty.png" alt="" />
+                        <p className='text-center mt-2'>1 Year Warranty</p>
                     </div>
                     <div>
-                        <img src=".\shipping.png" alt="" />
-                        <p>7 Days Return</p>
+                        <img className='mx-auto' src=".\shipping.png" alt="" />
+                        <p className='text-center mt-2'>Free Shipping</p>
                     </div>
                     <div>
-                        <img src=".\certified.png" alt="" />
-                        <p>7 Days Return</p>
+                        <img className='mx-auto' src=".\certified.png" alt="" />
+                        <p className='text-center mt-2'>100% Certified</p>
                     </div>
                     <div>
-                        <img src=".\maintenance.png" alt="" />
-                        <p>7 Days Return</p>
+                        <img className='mx-auto' src=".\maintenance.png" alt="" />
+                        <p className='text-center mt-2'>Lifetime Maintenance</p>
                     </div>
                 </div>
             </div>

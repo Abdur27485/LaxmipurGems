@@ -1,17 +1,18 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Firebase/AuthProvider';
 import { useForm } from 'react-hook-form';
 
 const SignUp = () => {
+    const navigate = useNavigate();
+    const {updateUserProfile, createUser} = useContext(AuthContext)
     const [showPassword, SetShowPassword] = useState(false)
     const { register, handleSubmit } = useForm();
 
     const imgUploadToken = import.meta.env.VITE_imgBBToken;
     const imgHostingUrl = `https://api.imgbb.com/1/upload?key=${imgUploadToken}`;
-    console.log(imgUploadToken)
+    // console.log(imgUploadToken)
 
-    const { createUser } = useContext(AuthContext)
     const signUpHandler = data => {
         console.log(data)
 
@@ -24,7 +25,13 @@ const SignUp = () => {
         })
         .then(res => res.json())
         .then( imgUrl =>{
-            console.log(imgUrl)
+            createUser(data.email, data.password)
+            .then(result => {
+                updateUserProfile(imgUrl.data.display_url)
+                .then(() =>{
+                    navigate('/')
+                })
+            })
         })
 
     }
@@ -43,7 +50,7 @@ const SignUp = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Password</span>
                         </label>
-                        <input name='password' type={showPassword ? "text" : "password"} className="file-input file-input-bordered border-[#FEACC6] w-full max-w-xs px-2" placeholder='Password' required />
+                        <input {...register("password")} name='password' type={showPassword ? "text" : "password"} className="file-input file-input-bordered border-[#FEACC6] w-full max-w-xs px-2" placeholder='Password' required />
                     </div>
                     <div className="form-control w-full mb-5">
                         <label className="label">
